@@ -24,28 +24,56 @@
 				<div class="logo">
 					<img src="img/logo.png" alt="">
 				</div>
-				<ul class="menu">
+				<div class="toggle_btn">
+					<span class="sandwich">
+						<span class="sw-topper"></span>
+						<span class="sw-bottom"></span>
+						<span class="sw-footer"></span>
+					</span>
+				</div>
+				<div class="mob_menu">
+					<div class="mob_menu_header">
+						<div class="top_phone">
+							<a href="tel:+38097751-47-40">+38 097 751-47-40</a>
+						</div>
+						<div class="top_btn">
+							<a href="#topFormWrapper" class="popup">Заказать звонок</a>
+						</div>
+						<ul class="lang">
+							<li class="active">Рус</li>
+							<li><a href="ua.html">Укр</a></li>
+						</ul>
+					</div>
+					<ul class="menu">
+						<li><a class="scroll" href="#service">Услуги</a></li>
+						<li><a class="scroll" href="#product">Продукция</a></li>
+						<li><a class="scroll" href="#gallery">Проекты</a></li>
+						<li><a class="scroll" href="#adv">Преимущества</a></li>
+						<li><a class="scroll" href="#contact">Контакты</a></li>
+					</ul>
+				</div>
+				<ul class="menu hidden-xs">
 					<li><a class="scroll" href="#service">Услуги</a></li>
 					<li><a class="scroll" href="#product">Продукция</a></li>
 					<li><a class="scroll" href="#gallery">Проекты</a></li>
 					<li><a class="scroll" href="#adv">Преимущества</a></li>
 					<li><a class="scroll" href="#contact">Контакты</a></li>
 				</ul>
-				<div class="top_phone">
+				<div class="top_phone hidden-xs">
 					<a href="tel:+38097751-47-40">+38 097 751-47-40</a>
 				</div>
-				<div class="top_btn hidden-md hidden-sm">
+				<div class="top_btn hidden-md hidden-sm hidden-xs">
 					<a href="#topFormWrapper" class="popup">Заказать звонок</a>
 				</div>
-				<ul class="lang hidden-sm">
+				<ul class="lang hidden-sm hidden-xs">
 					<li class="active">Рус</li>
 					<li><a href="ua.html">Укр</a></li>
 				</ul>
 			</div>
-			<div class="top_btn hidden-lg">
+			<div class="top_btn hidden-lg hidden-xs">
 				<a href="#topFormWrapper" class="popup">Заказать звонок</a>
 			</div>
-			<ul class="lang hidden-md hidden-lg">
+			<ul class="lang hidden-md hidden-lg hidden-xs">
 				<li class="active">Рус</li>
 				<li><a href="ua.html">Укр</a></li>
 			</ul>
@@ -55,7 +83,7 @@
 		<div class="container">
 			<h1>Эксклюзивный дилер <br>МК–illumination в Украине</h1>
 			<h2>Иллюминация премиум класса с полным циклом <br>услуг: от разработки дизайна до монтажа <br>и последующего обслуживания</h2>
-			<a href="" class="popup main_btn">Обсудить проект</a>
+			<a href="#mainFormWrapper" class="popup main_btn">Обсудить проект</a>
 		</div>	
 	</main>
 	<!-- END Header-->
@@ -71,7 +99,7 @@
 					<div class="text_inner">
 						<h4 class="hidden-xs">Новогоднее оформление</h4>
 						<p>Праздничный яркий дизайн <br>фасадного и внутреннего освещения <br>коммерческого объекта.</p>
-						<a href="#" class="popup main_btn blue">Просчитать проект</a>
+						<a href="#serviceForm1Wrapper" class="popup main_btn blue">Просчитать проект</a>
 					</div>
 				</div>
 			</div>
@@ -84,7 +112,7 @@
 					<div class="text_inner">
 						<h4 class="hidden-xs">Уличное освещение</h4>
 						<p>Праздничное и повседневное <br>освещение улиц, проспектов, парков.</p>
-						<a href="#" class="popup main_btn blue">Просчитать проект</a>
+						<a href="#serviceForm2Wrapper" class="popup main_btn blue">Просчитать проект</a>
 					</div>
 				</div>
 			</div>
@@ -97,7 +125,7 @@
 					<div class="text_inner">
 						<h4 class="hidden-xs">Декоративная иллюминация</h4>
 						<p>Декоративные инсталляции для внутреннего <br>и наружного оформления коммерческих <br>объектов.</p>
-						<a href="#" class="popup main_btn blue">Просчитать проект</a>
+						<a href="#serviceForm3Wrapper" class="popup main_btn blue">Просчитать проект</a>
 					</div>
 				</div>
 			</div>
@@ -110,7 +138,7 @@
 					<div class="text_inner">
 						<h4 class="hidden-xs">Фотозоны</h4>
 						<p>Оформление красивых площадок <br>с оригинальным освещением для <br>любительской фотосъемки с целью <br>привлечения клиентов.</p>
-						<a href="#" class="popup main_btn blue">Просчитать проект</a>
+						<a href="#serviceForm4Wrapper" class="popup main_btn blue">Просчитать проект</a>
 					</div>
 				</div>
 			</div>
@@ -123,7 +151,7 @@
 					<div class="text_inner">
 						<h4 class="hidden-xs">Витрины</h4>
 						<p>Оформление витрин магазинов <br>в различной стилистике, учитывая <br>праздничную тематику.</p>
-						<a href="#" class="popup main_btn blue">Просчитать проект</a>
+						<a href="#serviceForm5Wrapper" class="popup main_btn blue">Просчитать проект</a>
 					</div>
 				</div>
 			</div>
@@ -134,17 +162,16 @@
 		<div class="container relative">
 			<div class="container_inner">
 				<div class="row relative">
-					<div class="col-md-offset-1 col-md-4 open_form_left">
-						<h3>Консультация <br>специалиста</h3>
+					<div class="col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 open_form_left">
+						<h3>Консультация специалиста</h3>
 						<p>Заполните форму ниже, и наш специалист свяжется с Вами в течение 15 минут, <br>для консультации</p>
-							<form method="post" class="form" id="top_Form" action="mail.php">
-								<input type="hidden" name="whatform" value="Форма - Получить консультацию специалиста" />
-								<input type="text" name="name" placeholder="Ваше имя" />
-								<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
-								<button class="main_btn">Получить консультацию</button>
-							</form>
+						<form method="post" class="form" id="top_Form" action="mail.php">
+							<input type="hidden" name="whatform" value="Форма - Получить консультацию специалиста" />
+							<input type="text" name="name" placeholder="Ваше имя" />
+							<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+							<button class="main_btn">Получить консультацию</button>
+						</form>
 					</div>
-					<!-- <a href="#bottomWrapper" class="popup main_btn hidden-md hidden-lg">Получить сертификат</a> -->
 				</div>
 			</div>
 		</div>
@@ -243,7 +270,7 @@
 				<div class="col-sm-6">
 					<div class="product_wrapper_btn">
 						<h5>Получите полный PDF каталог</h5>
-						<a href="" class="popup main_btn dl_btn"><span>Получить каталог</span></a>
+						<a href="#pdfFormWrapper" class="popup main_btn dl_btn"><span>Получить каталог</span></a>
 					</div>
 				</div>
 			</div>
@@ -326,7 +353,7 @@
 					</div>
 				</div>
 			</div>
-			<a href="" class="popup main_btn">Просчитать проект</a>
+			<a href="#galleryFormWrapper" class="popup main_btn">Просчитать проект</a>
 		</div>
 	</section>
 
@@ -395,7 +422,7 @@
 					</div>
 				</div>
 			</div>
-			<a href="" class="popup main_btn">Просчитать проект</a>
+			<a href="#advFormWrapper" class="popup main_btn">Просчитать проект</a>
 		</div>
 	</section>
 
@@ -426,6 +453,29 @@
 						<img src="img/step_4.png" alt="">
 					</div>
 					<p>Вы оплачиваете, и мы приступаем к реализации проекта.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="open_form" class="open_form open_form2">
+		<div class="container relative">
+			<div class="container_inner">
+				<div class="row relative">
+					<div class="col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 open_form_left">
+						<h3>Вызов специалиста на объект</h3>
+						<p>Заполните форму ниже, и наш специалист свяжется с Вами в течение 15 минут, чтобы уточнить дату и время приезда.</p>
+						<form method="post" class="form" id="top_Form2" action="mail.php">
+							<input type="hidden" name="whatform" value="Форма - Вызвать специалиста специалиста на объект" />
+							<input type="text" name="name" placeholder="Ваше имя" />
+							<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+							<button class="main_btn">Вызвать специалиста</button>
+						</form>
+					</div>
+				</div>
+				<div class="call">
+					<span>или позвоните по телефону:</span>
+					<a href="tel:+380977514740">+38 097 751-47-40</a>
 				</div>
 			</div>
 		</div>
@@ -489,10 +539,13 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="hidden">
 		<div class="form_wrapper" id="topFormWrapper">
-			<h6>Заполните форму,</h6>
-			<p>и наш менеджер перезвонит Вам в течение 5 мин, чтобы ответить на все вопросы</p>
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
 			<form method="post" class="form" id="topForm" action="mail.php">
 				<input type="hidden" name="whatform" value="Форма - Перезвоните мне" />
 				<input type="text" name="name" placeholder="Ваше имя" />
@@ -504,9 +557,155 @@
 	</div>
 
 	<div class="hidden">
+		<div class="form_wrapper" id="mainFormWrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="mainForm" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Обсудить проект" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Обсудить проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="pdfFormWrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист отправит полный PDF-каталог на Вааш email</p>
+			</div>
+			<form method="post" class="form" id="pdfForm" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Получить PDF-каталог" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Получить PDF-каталог</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="serviceForm1Wrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="serviceForm1" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект (Новогоднее оформление)" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="serviceForm2Wrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="serviceForm2" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект (Уличное освещение)" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="serviceForm3Wrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="serviceForm3" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект (Декоративная иллюминация)" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="serviceForm4Wrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="serviceForm4" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект (Фотозоны)" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="serviceForm5Wrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="serviceForm5" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект (Витрины)" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="advFormWrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="advForm" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<div class="form_wrapper" id="galleryFormWrapper">
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш специалист свяжется с Вами <br>в течение 15 минут для консультации</p>
+			</div>
+			<form method="post" class="form" id="galleryForm" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Просчитать проект" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="email" name="email" placeholder="Ваш e-mail" />
+				<button class="main_btn">Просчитать проект</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="hidden">
 		<div class="form_wrapper" id="contactFormWrapper">
-			<h6>Заполните форму,</h6>
-			<p>чтобы задать вопрос нашему специалисту</p>
+			<div class="form_wrapper_header">
+				<h6>Заполните форму,</h6>
+				<p>и наш менеджер перезвонит Вам в течение 5 мин, чтобы ответить на все вопросы</p>
+			</div>
 			<form method="post" class="form" id="contactForm" action="mail.php">
 				<input type="hidden" name="whatform" value="Форма - Задать вопрос" />
 				<input type="text" name="name" placeholder="Ваше имя" />

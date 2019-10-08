@@ -12,13 +12,39 @@ $(document).ready(function() {
 		$('input, textarea').blur(function(){
 			$(this).attr('placeholder', $(this).data('placeholder'));
 		});
- 	});
+	});
 
- 	$('.product_shadow').hover(function(){
- 		$(this).addClass('shown');
- 	}, function(){
- 		$(this).removeClass('shown')
- 	});
+	$('.toggle_btn').click(function(){
+		$('.sandwich').toggleClass('active');
+		if($('.mob_menu').is(':visible')) {
+			$('.mob_menu').slideUp(300);
+			$('.top_head').removeClass('fixed');
+		} else {
+			$('.mob_menu').slideDown(300);
+			$('.top_head').addClass('fixed');
+		};
+	});
+
+	if($(window).width() > 768){
+		$('.product_shadow').hover(function(){
+			$(this).addClass('shown');
+		}, function(){
+			$(this).removeClass('shown');
+		});
+	}
+	else {
+		$('.product_shadow').hover(function(){
+			$(this).addClass('shown');
+			$(this).find('p').slideDown();
+		}, function(){
+			$(this).removeClass('shown');
+			$(this).find('p').slideUp();
+		});
+		$('.menu li').on('click', function(){
+			$('.mob_menu').slideUp(300);
+			$('.top_head').removeClass('fixed');
+		});
+	}
 
 	
 
@@ -57,9 +83,9 @@ $(document).ready(function() {
 	  }
 	  setTimeout(update, 0);
 	}
-	updater(document.getElementById("days"),
-document.getElementById("hours"), document.getElementById("minutes"),
-document.getElementById("seconds"));
+	// updater(document.getElementById("days"),
+	// document.getElementById("hours"), document.getElementById("minutes"),
+	// document.getElementById("seconds"));
 
 
 
@@ -93,7 +119,10 @@ document.getElementById("seconds"));
 	});
 
 
-
+	$('.tab').on('click', function(){
+		$('.tab').removeClass('active');
+		$(this).addClass('active');
+	});
 	
 	//slick carousel
 	$('.gallery_slider').slick({
@@ -160,7 +189,7 @@ document.getElementById("seconds"));
 	});
 	*/
 
-	/*
+	
 	//validation
 		var locationURL = window.location.search;
 	if ( locationURL == "?p=179&lang=ua" ) {
@@ -176,6 +205,67 @@ document.getElementById("seconds"));
 		var validationEmail = "Введите корректный E-mail";
 	}
 
+
+	$('#top_Form').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#top_Form2').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
 
 	$('#topForm').validate({
 		rules: {
@@ -207,8 +297,276 @@ document.getElementById("seconds"));
 			}
 		}
 	});
-
-	*/
+	$('#mainForm').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#serviceForm1').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#serviceForm2').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#serviceForm3').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#serviceForm4').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#serviceForm5').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#pdfForm').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#advForm').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#galleryForm').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationName,
+				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
 
 
 });
