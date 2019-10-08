@@ -1,0 +1,30 @@
+@font-face {
+	font-family: "BlissPro";
+	src: url("../fonts/BlissPro-Regular.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BlissPro";
+	src: url("../fonts/BlissPro-Bold.otf") format("opentype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BlissPro";
+	src: url("../fonts/BlissPro-Medium.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BlissPro";
+	src: url("../fonts/BlissPro-Light.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BlissPro";
+	src: url("../fonts/BlissPro-ExtraBold.otf") format("opentype");
+	font-weight: 800;
+	font-style: normal;
+}
