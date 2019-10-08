@@ -14,6 +14,12 @@ $(document).ready(function() {
 		});
  	});
 
+ 	$('.product_shadow').hover(function(){
+ 		$(this).addClass('shown');
+ 	}, function(){
+ 		$(this).removeClass('shown')
+ 	});
+
 	
 
 	function updater(d, h, m, s) {
