@@ -817,7 +817,7 @@ h2 {
 .gallery .gallery_slider_for .slick-current {
 	border-bottom: 4px solid #7088f9;
 }
-.gallery .sliders_container.unactive {
+.gallery .sliders_container {
 	display: none;
 
 }

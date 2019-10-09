@@ -4,9 +4,9 @@
 
 $(document).ready(function() {
 
-	let timer = setTimeout(function(){
-		$('.sliders_container').addClass('unactive');
-	}, 1000);
+	// let timer = setTimeout(function(){
+	// 	$('.sliders_container').addClass('unactive');
+	// }, 1000);
 	// remove placeholder after click
 	$(document).ready(function () {
 		$('input, textarea').focus(function(){
@@ -131,11 +131,57 @@ $(document).ready(function() {
 		$(this).addClass(active);
 		var tab = $(this).data().tab;
 		$('.sliders_container').each(function(i, e){
-			// $('.sliders_container').removeClass(active);
+			var slider = $(e).find('.gallery_slider').get(0).classList[1].split('_')[2];
 			if(e.dataset.tab == tab){
 				$(e).addClass(active);
+				
+				$('.gallery_slider_' + slider).slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					asNavFor: '.gallery_slider_for_' + slider,
+					swipe: false,
+					infinite: false,
+					dots:true,
+					nextArrow: '.gallery_next_' + slider,
+					prevArrow: '.gallery_prev_' + slider,
+					customPaging: function (slickSlider, i) {
+						$('.right_' + slider).text(slickSlider.slideCount);
+					},
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+							}
+						}
+					]
+				});
+
+				$('.gallery_slider_for_' + slider).slick({
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					asNavFor: '.gallery_slider_' + slider,
+					focusOnSelect: true,
+					swipe: false,
+					dots: true,
+					infinite: false,
+					dotsClass: 'gallery_digits',
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 2
+							}
+						}
+					]
+				});
+				$('.gallery_slider_' + slider).on('afterChange', function(event, slick, currentSlide, nextSlide){
+					$('.left_' + slider).text(currentSlide + 1);
+					$('.right_' + slider).text(slick.slideCount);
+				});
 			}
 			else {
+				$('.gallery_slider').slick('unslick');
+				$('.gallery_slider_for').slick('unslick');
 				$(e).removeClass(active);
 			}
 		});
@@ -152,8 +198,8 @@ $(document).ready(function() {
 		dots:true,
 		nextArrow: '.gallery_next_trc',
 		prevArrow: '.gallery_prev_trc',
-		customPaging: function (slider, i) {
-			$('.right_trc').text(slider.slideCount);
+		customPaging: function (slickSlider, i) {
+			$('.right_trc').text(slickSlider.slideCount);
 		},
 		responsive: [
 			{
@@ -188,182 +234,182 @@ $(document).ready(function() {
 	});
 
 	// restoraunt
-	$('.gallery_slider_rest').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_for_rest',
-		swipe: false,
-		infinite: false,
-		dots:true,
-		nextArrow: '.gallery_next_rest',
-		prevArrow: '.gallery_prev_rest',
-		customPaging: function (slider, i) {
-			$('.right_rest').text(slider.slideCount);
-		},
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-				}
-			}
-		]
-	});
+	// $('.gallery_slider_rest').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_for_rest',
+	// 	swipe: false,
+	// 	infinite: false,
+	// 	dots:true,
+	// 	nextArrow: '.gallery_next_rest',
+	// 	prevArrow: '.gallery_prev_rest',
+	// 	customPaging: function (slider, i) {
+	// 		$('.right_rest').text(slider.slideCount);
+	// 	},
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 			}
+	// 		}
+	// 	]
+	// });
 
-	$('.gallery_slider_for_rest').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_rest',
-		focusOnSelect: true,
-		swipe: false,
-		dots: true,
-		infinite: false,
-		dotsClass: 'gallery_digits',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2
-				}
-			}
-		]
-	});
-	$('.gallery_slider_rest').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		$('.left_rest').text(currentSlide + 1);
-		$('.right_rest').text(slick.slideCount);
-	});
+	// $('.gallery_slider_for_rest').slick({
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_rest',
+	// 	focusOnSelect: true,
+	// 	swipe: false,
+	// 	dots: true,
+	// 	infinite: false,
+	// 	dotsClass: 'gallery_digits',
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}
+	// 	]
+	// });
+	// $('.gallery_slider_rest').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	// 	$('.left_rest').text(currentSlide + 1);
+	// 	$('.right_rest').text(slick.slideCount);
+	// });
 
 	// park
-	$('.gallery_slider_park').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_for_park',
-		swipe: false,
-		infinite: false,
-		dots:true,
-		nextArrow: '.gallery_next_park',
-		prevArrow: '.gallery_prev_park',
-		customPaging: function (slider, i) {
-			$('.right_park').text(slider.slideCount);
-		},
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-				}
-			}
-		]
-	});
+	// $('.gallery_slider_park').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_for_park',
+	// 	swipe: false,
+	// 	infinite: false,
+	// 	dots:true,
+	// 	nextArrow: '.gallery_next_park',
+	// 	prevArrow: '.gallery_prev_park',
+	// 	customPaging: function (slider, i) {
+	// 		$('.right_park').text(slider.slideCount);
+	// 	},
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 			}
+	// 		}
+	// 	]
+	// });
 
-	$('.gallery_slider_for_park').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_park',
-		focusOnSelect: true,
-		swipe: false,
-		dots: true,
-		infinite: false,
-		dotsClass: 'gallery_digits',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2
-				}
-			}
-		]
-	});
-	$('.gallery_slider_park').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		$('.left_park').text(currentSlide + 1);
-		$('.right_park').text(slick.slideCount);
-	});
+	// $('.gallery_slider_for_park').slick({
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_park',
+	// 	focusOnSelect: true,
+	// 	swipe: false,
+	// 	dots: true,
+	// 	infinite: false,
+	// 	dotsClass: 'gallery_digits',
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}
+	// 	]
+	// });
+	// $('.gallery_slider_park').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	// 	$('.left_park').text(currentSlide + 1);
+	// 	$('.right_park').text(slick.slideCount);
+	// });
 	// hotel
-	$('.gallery_slider_hotel').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_for_hotel',
-		swipe: false,
-		infinite: false,
-		dots:true,
-		nextArrow: '.gallery_next_hotel',
-		prevArrow: '.gallery_prev_hotel',
-		customPaging: function (slider, i) {
-			$('.right_hotel').text(slider.slideCount);
-		},
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-				}
-			}
-		]
-	});
+	// $('.gallery_slider_hotel').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_for_hotel',
+	// 	swipe: false,
+	// 	infinite: false,
+	// 	dots:true,
+	// 	nextArrow: '.gallery_next_hotel',
+	// 	prevArrow: '.gallery_prev_hotel',
+	// 	customPaging: function (slider, i) {
+	// 		$('.right_hotel').text(slider.slideCount);
+	// 	},
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 			}
+	// 		}
+	// 	]
+	// });
 
-	$('.gallery_slider_for_hotel').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_hotel',
-		focusOnSelect: true,
-		swipe: false,
-		dots: true,
-		infinite: false,
-		dotsClass: 'gallery_digits',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2
-				}
-			}
-		]
-	});
-	$('.gallery_slider_hotel').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		$('.left_hotel').text(currentSlide + 1);
-		$('.right_hotel').text(slick.slideCount);
-	});
+	// $('.gallery_slider_for_hotel').slick({
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_hotel',
+	// 	focusOnSelect: true,
+	// 	swipe: false,
+	// 	dots: true,
+	// 	infinite: false,
+	// 	dotsClass: 'gallery_digits',
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}
+	// 	]
+	// });
+	// $('.gallery_slider_hotel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	// 	$('.left_hotel').text(currentSlide + 1);
+	// 	$('.right_hotel').text(slick.slideCount);
+	// });
 	// house
-	$('.gallery_slider_house').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_for_house',
-		swipe: false,
-		infinite: false,
-		dots:true,
-		nextArrow: '.gallery_next_house',
-		prevArrow: '.gallery_prev_house',
-		customPaging: function (slider, i) {
-			$('.right_house').text(slider.slideCount);
-		},
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-				}
-			}
-		]
-	});
+	// $('.gallery_slider_house').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_for_house',
+	// 	swipe: false,
+	// 	infinite: false,
+	// 	dots:true,
+	// 	nextArrow: '.gallery_next_house',
+	// 	prevArrow: '.gallery_prev_house',
+	// 	customPaging: function (slider, i) {
+	// 		$('.right_house').text(slider.slideCount);
+	// 	},
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 			}
+	// 		}
+	// 	]
+	// });
 
-	$('.gallery_slider_for_house').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.gallery_slider_house',
-		focusOnSelect: true,
-		swipe: false,
-		dots: true,
-		infinite: false,
-		dotsClass: 'gallery_digits',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2
-				}
-			}
-		]
-	});
-	$('.gallery_slider_house').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		$('.left_house').text(currentSlide + 1);
-		$('.right_house').text(slick.slideCount);
-	});
+	// $('.gallery_slider_for_house').slick({
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.gallery_slider_house',
+	// 	focusOnSelect: true,
+	// 	swipe: false,
+	// 	dots: true,
+	// 	infinite: false,
+	// 	dotsClass: 'gallery_digits',
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}
+	// 	]
+	// });
+	// $('.gallery_slider_house').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	// 	$('.left_house').text(currentSlide + 1);
+	// 	$('.right_house').text(slick.slideCount);
+	// });
 
 
 
