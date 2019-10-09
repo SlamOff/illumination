@@ -4,8 +4,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 $c = true;
 if ( $method === 'POST' ) {
 
-	$project_name = "Bepas";
+	$project_name = "Illumination Design";
 	$admin_email  = "vetalsd2@gmail.com";
+	//Cherpakiv@design-illumination.com
 	$form_subject = "Заявка с лендинга";
 
 	foreach ( $_POST as $key => $value ) {
@@ -20,8 +21,9 @@ if ( $method === 'POST' ) {
 }
 } else if ( $method === 'GET' ) {
 
-	$project_name = "Bepas";
+	$project_name = "Illumination Design";
 	$admin_email  = "vetalsd2@gmail.com";
+	//Cherpakiv@design-illumination.com
 	$form_subject = "Заявка с лендинга";
 
 	foreach ( $_GET as $key => $value ) {
